@@ -47,7 +47,8 @@ if ! grep -q "^Driver: docker$"  <<<"${current_builder}" && \
      grep -q "linux/amd64" <<<"${current_builder}" && \
      grep -q "linux/arm"   <<<"${current_builder}" && \
      grep -q "linux/arm64" <<<"${current_builder}" && \
-     grep -q "linux/s390x" <<<"${current_builder}"; then
+     grep -q "linux/s390x" <<<"${current_builder}" && \
+     grep -q "linux/ppc64le" <<<"${current_builder}"; then
   exit 0
 fi
 
